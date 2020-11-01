@@ -1,0 +1,16 @@
+server:
+  port: 8019
+
+person:
+  name: zhen.yin
+  age: 18
+  addr:
+    - 北京
+    - 郑州
+  maps: {key1: "v1",key2: "v2"}
+
+
+
+
+logging.config: classpath:logback-spring.xml
+   
