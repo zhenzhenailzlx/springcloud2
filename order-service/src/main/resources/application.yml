@@ -4,6 +4,13 @@ spring:
   application:
     name: order
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,hystrix.stream
+
+
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10
