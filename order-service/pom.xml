@@ -92,7 +92,7 @@
 	</dependencyManagement>
 
 	<build>
-		<finalName>order2</finalName>
+		<finalName>order</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

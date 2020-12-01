@@ -16,9 +16,14 @@ management:
       exposure:
         include: health,info,hystrix.stream
 
+mygateway:
+  separateThreadPoolKeys: user
+
+
+
 spring.cloud.gateway.discovery.locator.predicates[0].name: Path
 spring.cloud.gateway.discovery.locator.predicates[0].args[pattern]: "'/api/'+serviceId+'/**'"
-spring.cloud.gateway.discovery.locator.filters[0].name: Hystrix
+spring.cloud.gateway.discovery.locator.filters[0].name: MyHystrix
 spring.cloud.gateway.discovery.locator.filters[0].args[name]: serviceId
 spring.cloud.gateway.discovery.locator.filters[1].name: RewritePath
 spring.cloud.gateway.discovery.locator.filters[1].args[regexp]: "'/api/' + serviceId + '/(?<remaining>.*)'"
@@ -41,7 +46,7 @@ eureka:
     instance-info-replication-interval-seconds: 20
     initial-instance-info-replication-interval-seconds: 30
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://120.53.234.164:8761/eureka/
       #defaultZone: http://eureka0:8000/eureka/,http://eureka1:8001/eureka/,http://eureka2:8002/eureka/
       
 ribbon:
@@ -53,6 +58,8 @@ ribbon:
 
 #超时时间（默认1000，单位：ms）
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
-   
+
+
+
 logging.config: classpath:logback-spring.xml
    
