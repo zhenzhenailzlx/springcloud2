@@ -1,0 +1,8 @@
+spring:
+  rabbitmq:
+    addresses: 120.53.234.164
+    port: 5672
+    username: yinzhen
+    password: yinzhen
+    publisher-confirm-type: CORRELATED
+    publisher-returns: true
