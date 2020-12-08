@@ -26,10 +26,6 @@ public class QueueListener {
         System.out.println("接收消息"+new String(message.getBody()));
 
         channel.basicAck(deliveryTag,true);
-
-
-
-
     }
 
 }

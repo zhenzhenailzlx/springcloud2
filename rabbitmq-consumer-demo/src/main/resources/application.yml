@@ -7,4 +7,4 @@ spring:
     publisher-confirm-type: CORRELATED
     listener:
       direct:
-        acknowledge-mode: manual
+        acknowledge-mode: auto
